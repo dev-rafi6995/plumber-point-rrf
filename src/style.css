@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Mukta:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import "tailwindcss";
+@theme {
+	--color-primary: #dd3142;
+	--color-secondary: #eeff06;
+	--color-base-color: #6d6d6d;
+	--font-bg: "Bricolage Grotesque", sans-serif;
+	--font-roboto: "Roboto", sans-serif;
+	--font-mukta: "Mukta", sans-serif;
+	--shadow-defult: 0px 4px 24px rgba(0, 0, 0, 0.05);
+	--spacing-18px: 1.125rem;
+}
+
+@layer utilities {
+	.container {
+		@apply mx-auto 2xl:w-[74.625rem] px-2 sm:px-3;
+	}
+}
+@layer components {
+	body {
+		@apply font-roboto text-base font-normal leading-[134%] text-base-color bg-white;
+	}
+	.btn {
+		@apply px-[1.063rem] pt-1.5 pb-[0.438rem] inline-flex rounded-[0.313rem] font-normal text-base leading-[1.188rem] text-black bg-[#F6FAFB] underline capitalize cursor-pointer;
+	}
+	.btn-primary {
+		@apply bg-primary text-white pl-[0.563rem] pr-[0.5rem] pt-3 pb-2.5 font-bold text-xs leading-[100%] uppercase no-underline;
+	}
+	.nav-link {
+		@apply font-medium text-sm leading-[100%] text-[#222222] p-2.5 capitalize relative transition-all
+    ease-linear duration-[.3s] before:absolute before:content-[''] before:h-0.5 before:left-2.5 before:right-2.5 before:bottom-[0.438rem] before:bg-primary before:w-0 hover:before:w-auto;
+	}
+	.nav-link.active {
+		@apply font-bold before:w-auto;
+	}
+}
+@layer base {
+	.h1,
+	h1 {
+		@apply text-[2.75rem] font-extrabold leading-[100%] uppercase font-bg text-[#000000];
+	}
+	.h2,
+	h2 {
+		@apply text-[1.875rem] font-medium leading-[100%] uppercase font-roboto text-[#0E0E0E];
+	}
+}
