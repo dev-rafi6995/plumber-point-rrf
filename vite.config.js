@@ -10,7 +10,7 @@ export default defineConfig({
 				service: path.resolve(__dirname, "service.html"),
 				project: path.resolve(__dirname, "our-project.html"),
 				blog: path.resolve(__dirname, "our-blog.html"),
-				contact: path.resolve(__dirname, "contact.html"),
+				contact: path.resolve(__dirname, "contact-us.html"),
 			},
 		},
 	},
