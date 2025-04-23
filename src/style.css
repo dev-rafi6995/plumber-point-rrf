@@ -1,15 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Mukta:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Mukta:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 @import "tailwindcss";
 @theme {
 	--color-primary: #dd3142;
 	--color-secondary: #eeff06;
 	--color-base-color: #6d6d6d;
+	--color-body-text: #222222;
 	--font-bg: "Bricolage Grotesque", sans-serif;
 	--font-roboto: "Roboto", sans-serif;
 	--font-mukta: "Mukta", sans-serif;
+	--font-rubik: "Rubik", sans-serif;
 	--shadow-defult: 0px 4px 24px rgba(0, 0, 0, 0.05);
 	--spacing-18px: 1.125rem;
+	--linear-gradient: 90.04deg, #dd3142 0.03%, rgba(196, 196, 196, 0) 141.61%;
 }
 
 @layer utilities {
@@ -28,7 +31,7 @@
 		@apply bg-primary text-white pl-[0.563rem] pr-[0.5rem] pt-3 pb-2.5 font-bold text-xs leading-[100%] uppercase no-underline;
 	}
 	.nav-link {
-		@apply font-medium text-sm leading-[100%] text-[#222222] p-2.5 capitalize relative transition-all
+		@apply block font-medium text-sm leading-[100%] text-[#222222] p-2.5 capitalize relative transition-all
     ease-linear duration-[.3s] before:absolute before:content-[''] before:h-0.5 before:left-2.5 before:right-2.5 before:bottom-[0.438rem] before:bg-primary before:w-0 hover:before:w-auto;
 	}
 	.nav-link.active {
@@ -44,4 +47,8 @@
 	h2 {
 		@apply text-[1.875rem] font-medium leading-[100%] uppercase font-roboto text-[#0E0E0E];
 	}
+}
+
+label:has(+ input:focus) {
+	display: none;
 }
